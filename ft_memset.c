@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:19 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/29 10:52:20 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/10/29 16:11:45 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	char			*str;
+	unsigned char	*str;
 	unsigned char	uc;
 	size_t			len;
 
-	str = (char *)s;
+	str = (unsigned char *)s;
 	uc = (unsigned char)c;
 	len = 0;
 	while (len < n)
