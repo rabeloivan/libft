@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:28 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/29 10:52:29 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/10/30 00:01:32 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	len = 0;
 	if (size > 0)
 	{
-		while (len < (size - 1) && src[len])
+		while (len < size - 1 && src[len])
 		{
 			dst[len] = src[len];
 			len++;
