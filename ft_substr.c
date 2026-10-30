@@ -6,10 +6,17 @@
 /*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 23:13:46 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/29 23:31:50 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/10/30 21:22:41 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+// char	*ft_substr(char const *s, unsigned int start, size_t len)
+// {
+// 	char	*sub;
+
+// 	if (!s)
+// 		return (NULL);
+	
+// }
