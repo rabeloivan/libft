@@ -6,24 +6,24 @@
 /*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:11:19 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/30 21:02:20 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/10/31 22:27:56 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count_words(char const *s, char c)
+static size_t	ft_count_words(char const *s, char c)
 {
-	int	len;
-	int	new_word;
-	int	count;
+	size_t	new_word;
+	size_t	count;
+	size_t	offset;
 
-	len = 0;
 	new_word = 1;
 	count = 0;
-	while (s[len])
+	offset = 0;
+	while (s[offset])
 	{
-		if (s[len] != c)
+		if (s[offset] != c)
 		{
 			if (new_word)
 				count++;
@@ -31,59 +31,58 @@ static int	ft_count_words(char const *s, char c)
 		}
 		else
 			new_word = 1;
-		len++;
+		offset++;
 	}
 	return (count);
 }
 
+static void	ft_free_result(char **result)
+{
+	size_t	offset;
+
+	offset = 0;
+	while (result[offset])
+		free((void *)result[offset++]);
+	free((void *)result);
+}
+
+static size_t	ft_get_word_len(char const **s, char c)
+{
+	size_t	len;
+
+	while (**s == c && **s)
+		(*s)++;
+	len = 0;
+	while ((*s)[len] != c && (*s)[len])
+		len++;
+	return (len);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	int		n_words;
+	size_t	n_words;
+	size_t	offset;
+	size_t	len;
 	char	**result;
-	int		len;
-	int		word_len;
 
 	if (!s)
 		return (NULL);
 	n_words = ft_count_words(s, c);
-	result = (char **)ft_calloc(n_words, sizeof(char *));
+	result = (char **)ft_calloc(n_words + 1, sizeof(char *));
 	if (!result)
 		return (NULL);
-	len = 0;
-	while (len < n_words)
+	offset = -1;
+	while (++offset < n_words)
 	{
-		while (*s == c && *s)
-			s++;
-		word_len = 0;
-		while (s[word_len] != c && s[word_len])
-			word_len++;
-		result[len] = (char *)ft_calloc(word_len + 1, sizeof(char));
-		if (!result[len])
+		len = ft_get_word_len(&s, c);
+		result[offset] = (char *)ft_calloc(len + 1, sizeof(char));
+		if (!result[offset])
 		{
-			while (len--)
-				free(result[len]);
-			free(result);
+			ft_free_result(result);
 			return (NULL);
 		}
-		ft_strlcpy(result[len], s, word_len + 1);
-		s += word_len;
-		len++;
+		ft_strlcpy(result[offset], s, len + 1);
+		s += len;
 	}
 	return (result);
-}
-
-int	main(void)
-{
-	char	**result;
-	int		i;
-
-	result = ft_split("    um,    dois, tres,quatro  ", ',');
-	i = 0;
-	while (result[i])
-	{
-		printf("result[%d] = %s\n", i, result[i]);
-		i++;
-	}
-	printf("result[%d] = %s\n", i, result[i]);
-	return (0);
 }

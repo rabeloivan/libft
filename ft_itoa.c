@@ -6,15 +6,15 @@
 /*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:11:07 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/30 20:32:00 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/10/31 22:33:04 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_get_alloc_len(long num)
+static size_t	ft_get_alloc_len(long num)
 {
-	int	len;
+	size_t	len;
 
 	if (!num)
 		return (1);
@@ -35,7 +35,7 @@ static int	ft_get_alloc_len(long num)
 char	*ft_itoa(int n)
 {
 	long	num;
-	int		len;
+	size_t	len;
 	char	*result;
 
 	num = (long)n;

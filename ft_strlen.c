@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:16 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/30 20:05:00 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/10/30 23:21:23 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,3 @@ size_t	ft_strlen(const char *s)
 		len++;
 	return (len);
 }
-
-// int	main(int argc, char **argv)
-// {
-// 	int	i;
-
-// 	i = 1;
-// 	while (i < argc)
-// 	{
-// 		printf("%s - %zu\n", argv[i], ft_strlen(argv[i]));
-// 		i++;
-// 	}
-// 	return (0);
-// }

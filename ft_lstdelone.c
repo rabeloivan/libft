@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:19:38 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/30 15:50:47 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/10/31 22:39:55 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	if (!lst || !del)
 		return ;
 	del(lst->content);
-	free(lst);
+	free((t_list *)lst);
 }
