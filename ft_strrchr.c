@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 11:22:22 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/29 11:54:20 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/10/31 21:00:48 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,18 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	char			*str;
-	unsigned char	uc;
-	int				len;
+	unsigned char	byte;
+	size_t			offset;
 
 	str = (char *)s;
-	uc = (unsigned char)c;
-	len = ft_strlen(s);
-	if (uc == '\0')
-		return (str + len);
-	while (len--)
+	byte = (unsigned char)c;
+	offset = ft_strlen(s);
+	if (byte == '\0')
+		return (str + offset);
+	while (offset--)
 	{
-		if (str[len] == uc)
-			return (str + len);
+		if ((unsigned char)str[offset] == byte)
+			return (str + offset);
 	}
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	const char	s[] = "Hello, World!";
-
-// 	printf("%s\n", ft_strrchr(s, 'o'));
-// 	printf("%p\n", (void *)ft_strrchr(s, 'o'));
-// 	printf("%p\n", (void *)(s + 8));
-// 	return (0);
-// }

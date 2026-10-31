@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:11:30 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/30 21:34:49 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/10/31 22:57:27 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 	size_t	len;
-	char	*trimmed;
+	char	*result;
 
 	if (!s1 || !set)
 		return (NULL);
@@ -27,10 +27,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	while (end > 0 && ft_strrchr(set, s1[end - 1]))
 		end--;
+	if (start >= end)
+		return (ft_strdup(""));
 	len = end - start;
-	trimmed = (char *)ft_calloc(len + 1, sizeof(char));
-	if (!trimmed)
+	result = (char *)ft_calloc(len + 1, sizeof(char));
+	if (!result)
 		return (NULL);
-	ft_strlcpy(trimmed, s1 + start, len + 1);
-	return (trimmed);
+	ft_strlcpy(result, s1 + start, len + 1);
+	return (result);
 }

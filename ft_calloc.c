@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 17:44:41 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/30 00:15:43 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/10/31 23:27:58 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,17 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
+	size_t	total_size;
 	void	*ptr;
-	size_t	total;
 
 	if (!nmemb || !size)
-		return (malloc(1));
+		return (malloc(0));
 	if (size > ((size_t)-1) / nmemb)
 		return (NULL);
-	total = nmemb * size;
-	ptr = malloc(total);
+	total_size = nmemb * size;
+	ptr = malloc(total_size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, total);
+	ft_bzero(ptr, total_size);
 	return (ptr);
 }
-
-// int	main(void)
-// {
-// 	int	*arr;
-// 	int	i;
-
-// 	arr = (int *)ft_calloc(5, sizeof(int));
-// 	if (!arr)
-// 		return (1);
-// 	i = 0;
-// 	while (i < 5)
-// 		printf("%d ", arr[i++]);
-// 	printf("\n");
-// 	free(arr);
-// 	return (0);
-// }

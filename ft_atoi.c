@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:43 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/29 10:52:50 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/10/30 23:13:18 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
-
-// int	main(int argc, char **argv)
-// {
-// 	int	i;
-
-// 	i = 1;
-// 	while (i < argc)
-// 	{
-// 		printf("%d\n", ft_atoi(argv[i]));
-// 		i++;
-// 	}
-// 	return (0);
-// }
