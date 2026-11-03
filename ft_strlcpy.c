@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:28 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/30 23:12:43 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/03 20:18:39 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		offset++;
 	return (offset);
 }
+
+// int	main(void)
+// {
+// 	char	dst[10] = "xxx";
+
+// 	printf("'dst' before ft_strlcpy:\n%s\n", dst);
+// 	ft_strlcpy(dst, "Hello, World!", sizeof(dst));
+// 	printf("\n'dst' before ft_strlcpy:\n%s\n", dst);
+// 	return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:58:20 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/30 20:08:03 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/03 19:04:23 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h> // remover
-# include <limits.h> // remover
 
 /* Libc Functions */
 int				ft_isalpha(int c);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 11:22:22 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/31 21:00:48 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/03 22:13:14 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,14 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
+// int	main(int argc, char **argv)
+// {
+// 	if (argc != 3 || !(argv[2][0] != '\0' && argv[2][1] == '\0'))
+// 	{
+// 		printf("Wrong number of arguments.\n");
+// 		return (1);
+// 	}
+// 	printf("%s\n", ft_strrchr(argv[1], argv[2][0]));
+// 	return (0);
+// }
