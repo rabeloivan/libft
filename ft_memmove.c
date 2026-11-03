@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 13:44:43 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/31 20:58:19 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/03 20:20:30 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			dest_ptr[n] = src_ptr[n];
 	return (dest);
 }
+
+// int	main(void)
+// {
+// 	char	dest[10] = "xxx";
+
+// 	printf("'dest' before ft_memmove:\n%s\n", dest);
+// 	ft_memmove((char *)dest, (const char *)"Hello, World!", sizeof(dest));
+// 	printf("\n'dest' before ft_memmove:\n%s\n", dest);
+// 	return (0);
+// }

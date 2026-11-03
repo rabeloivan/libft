@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:16 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/30 23:21:23 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/03 22:14:12 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,21 @@ size_t	ft_strlen(const char *s)
 		len++;
 	return (len);
 }
+
+// int	main(int argc, char **argv)
+// {
+// 	int	offset;
+
+// 	if (argc < 2)
+// 	{
+// 		printf("Wrong number of arguments.\n");
+// 		return (1);
+// 	}
+// 	offset = 1;
+// 	while (offset < argc)
+// 	{
+// 		printf("%s — %zu\n", argv[offset], ft_strlen(argv[offset]));
+// 		offset++;
+// 	}
+// 	return (0);
+// }

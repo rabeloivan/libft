@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 13:44:24 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/31 20:57:44 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/03 20:21:10 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,13 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+// int	main(void)
+// {
+// 	char	dest[10] = "xxx";
+
+// 	printf("'dest' before ft_memcpy:\n%s\n", dest);
+// 	ft_memcpy((char *)dest, (const char *)"Hello, World!", sizeof(dest));
+// 	printf("\n'dest' before ft_memcpy:\n%s\n", dest);
+// 	return (0);
+// }

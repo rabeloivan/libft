@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 13:43:50 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/31 21:03:11 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/03 23:07:48 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,30 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char	*s_ptr;
+	const unsigned char	*ptr;
 	unsigned char		byte;
 	size_t				offset;
 
-	s_ptr = (const unsigned char *)s;
+	ptr = (const unsigned char *)s;
 	byte = (unsigned char)c;
 	offset = 0;
 	while (offset < n)
 	{
-		if (s_ptr[offset] == byte)
-			return ((void *)(s_ptr + offset));
+		if (ptr[offset] == byte)
+			return ((void *)(ptr + offset));
 		offset++;
 	}
 	return (NULL);
 }
+
+// int	main(int argc, char **argv)
+// {
+// 	if (argc != 3 || !(argv[2][0] != '\0' && argv[2][1] == '\0'))
+// 	{
+// 		printf("Wrong number of arguments.\n");
+// 		return (1);
+// 	}
+// 	printf("%s\n", (char *)ft_memchr((const void *)argv[1], (int)argv[2][0],
+// 			ft_strlen(argv[1])));
+// 	return (0);
+// }

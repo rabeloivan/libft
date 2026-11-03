@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:43 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/30 23:13:18 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/03 23:27:21 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,15 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	}
 	return (result * sign);
+}
+
+int	main(int argc, char **argv)
+{
+	if (argc != 2)
+	{
+		printf("Usage: %s <number>\n", argv[0]);
+		return (1);
+	}
+	printf("Input%d\n", ft_atoi(argv[1]));
+	return (0);
 }

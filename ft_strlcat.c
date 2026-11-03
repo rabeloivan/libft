@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 17:43:14 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/30 23:14:18 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/03 20:19:07 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dst_len + offset] = '\0';
 	return (dst_len + ft_strlen(src));
 }
+
+// int	main(void)
+// {
+// 	char	dst[10] = "xxx";
+
+// 	printf("'dst' before ft_strlcat:\n%s\n", dst);
+// 	ft_strlcat(dst, "World!", sizeof(dst));
+// 	printf("\n'dst' before ft_strlcat:\n%s\n", dst);
+// 	return (0);
+// }
