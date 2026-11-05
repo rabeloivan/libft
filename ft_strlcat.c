@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 17:43:14 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/03 20:19:07 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/04 21:21:57 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,21 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (dst_len + ft_strlen(src));
 }
 
-// int	main(void)
+// int	main(int argc, char **argv)
 // {
-// 	char	dst[10] = "xxx";
+// 	char	dst[10];
+// 	size_t	len;
 
-// 	printf("'dst' before ft_strlcat:\n%s\n", dst);
-// 	ft_strlcat(dst, "World!", sizeof(dst));
-// 	printf("\n'dst' before ft_strlcat:\n%s\n", dst);
+// 	if (argc != 3)
+// 	{
+// 		printf("Usage: %s <string1> <string2>\n", argv[0]);
+// 		return (1);
+// 	}
+// 	if (ft_strlen(argv[1]) >= sizeof(dst))
+// 		return (1);
+// 	ft_strlcpy(dst, argv[1], sizeof(dst));
+// 	printf("Before: %s\n", dst);
+// 	len = ft_strlcat(dst, argv[2], sizeof(dst));
+// 	printf("After: %s\nDestination length + Source length: %zu\n", dst, len);
 // 	return (0);
 // }

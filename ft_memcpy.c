@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 13:44:24 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/03 20:21:10 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 10:36:06 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,24 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-// int	main(void)
+// int	main(int argc, char **argv)
 // {
-// 	char	dest[10] = "xxx";
+// 	size_t	bytes;
+// 	char	ptr[64];
 
-// 	printf("'dest' before ft_memcpy:\n%s\n", dest);
-// 	ft_memcpy((char *)dest, (const char *)"Hello, World!", sizeof(dest));
-// 	printf("\n'dest' before ft_memcpy:\n%s\n", dest);
+// 	if (argc != 2)
+// 	{
+// 		printf("Usage: %s <string>\n", argv[0]);
+// 		return (1);
+// 	}
+// 	bytes = ft_strlen(argv[1]) + 1;
+// 	if (bytes > sizeof(ptr) - 2)
+// 		return (1);
+// 	ft_memcpy(ptr, argv[1], bytes);
+// 	printf("Before: %s\n", ptr);
+// 	ft_memcpy(ptr + 2, ptr, bytes);
+// 	printf("After (right +2): %s\n", ptr);
+// 	ft_memcpy(ptr, ptr + 2, bytes);
+// 	printf("After (left -2): %s\n", ptr);
 // 	return (0);
 // }

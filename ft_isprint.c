@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:14 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/03 22:14:23 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 11:11:36 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,21 @@ int	ft_isprint(int c)
 
 // int	main(int argc, char **argv)
 // {
-// 	int	offset;
+// 	char			*str;
+// 	size_t			offset;
+// 	unsigned char	c;
 
-// 	if (argc < 2)
+// 	if (argc != 2)
 // 	{
-// 		printf("Wrong number of arguments.\n");
+// 		printf("Usage: %s <string>\n", argv[0]);
 // 		return (1);
 // 	}
-// 	offset = 1;
-// 	while (offset < argc)
+// 	str = argv[1];
+// 	offset = 0;
+// 	while (str[offset])
 // 	{
-// 		if (argv[offset][0] != '\0' && !argv[offset][1])
-// 			printf("%c — %d\n", argv[offset][0], ft_isprint(argv[offset][0]));
+// 		c = (unsigned char)str[offset];
+// 		printf("%d (%c) = %d\n", c, c, ft_isprint(c));
 // 		offset++;
 // 	}
 // 	return (0);

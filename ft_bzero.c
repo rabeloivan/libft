@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:21 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/03 20:16:53 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 11:23:16 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,20 @@ void	ft_bzero(void *s, size_t n)
 
 // int	main(void)
 // {
-// 	char	arr[10];
-// 	size_t	len;
-// 	size_t	offset;
+// 	unsigned char	ptr[5] = {1, 2, 3, 4, 5};
+// 	size_t			bytes;
+// 	size_t			offset;
 
-// 	printf("'arr' before ft_bzero:\n");
-// 	len = sizeof(arr);
+// 	bytes = sizeof(ptr);
+// 	printf("Before: ");
 // 	offset = 0;
-// 	while (offset < len)
-// 	{
-// 		arr[offset] = '9';
-// 		printf("%c ", arr[offset++]);
-// 	}
-// 	ft_bzero((void *)arr, len);
-// 	printf("\n\n'arr' after ft_bzero:\n");
+// 	while (offset < bytes)
+// 		printf("%zu ", (size_t)ptr[offset++]);
+// 	ft_bzero(ptr, bytes);
+// 	printf("\nAfter: ");
 // 	offset = 0;
-// 	while (offset < len)
-// 		printf("%c ", arr[offset++]);
+// 	while (offset < bytes)
+// 		printf("%zu ", (size_t)ptr[offset++]);
 // 	printf("\n");
 // 	return (0);
 // }

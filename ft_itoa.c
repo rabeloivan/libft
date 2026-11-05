@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:11:07 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/31 22:33:04 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 12:03:23 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 
 	num = (long)n;
 	len = ft_get_alloc_len(num);
-	result = (char *)ft_calloc(len + 1, sizeof(char));
+	result = ft_calloc(len + 1, sizeof(char));
 	if (!result)
 		return (NULL);
 	if (num < 0)
@@ -58,3 +58,18 @@ char	*ft_itoa(int n)
 	}
 	return (result);
 }
+
+// int	main(int argc, char **argv)
+// {
+// 	int	n;
+
+// 	if (argc != 2)
+// 	{
+// 		printf("Usage: %s <number>\n", argv[0]);
+// 		return (1);
+// 	}
+// 	n = ft_atoi(argv[1]);
+// 	printf("Input: %s\n", argv[1]);
+// 	printf("Result: %s\n", ft_itoa(n));
+// 	return (0);
+// }

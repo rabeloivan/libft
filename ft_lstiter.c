@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:19:56 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/30 16:15:26 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 14:31:21 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,63 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
+
+// static void	ft_toupper_wrapper(void *content)
+// {
+// 	char	*str;
+// 	size_t	offset;
+
+// 	str = (char *)content;
+// 	offset = 0;
+// 	while (str[offset])
+// 	{
+// 		str[offset] = (char)ft_toupper((unsigned char)str[offset]);
+// 		offset++;
+// 	}
+// }
+
+// int	main(int argc, char **argv)
+// {
+// 	t_list	*lst;
+// 	t_list	*node;
+// 	t_list	*tmp;
+// 	int		offset;
+
+// 	if (argc < 2)
+// 	{
+// 		printf("Usage: %s <string1> [string2 ...]\n", argv[0]);
+// 		return (1);
+// 	}
+// 	lst = NULL;
+// 	offset = 1;
+// 	while (offset < argc)
+// 	{
+// 		node = ft_lstnew(ft_strdup(argv[offset]));
+// 		if (!node)
+// 		{
+// 			ft_lstclear(&lst, free);
+// 			return (1);
+// 		}
+// 		ft_lstadd_back(&lst, node);
+// 		offset++;
+// 	}
+// 	printf("Before: ");
+// 	tmp = lst;
+// 	while (tmp)
+// 	{
+// 		printf("%s -> ", (char *)tmp->content);
+// 		tmp = tmp->next;
+// 	}
+// 	printf("%p\n", (void *)tmp);
+// 	ft_lstiter(lst, ft_toupper_wrapper);
+// 	printf("After: ");
+// 	tmp = lst;
+// 	while (tmp)
+// 	{
+// 		printf("%s -> ", (char *)tmp->content);
+// 		tmp = tmp->next;
+// 	}
+// 	printf("%p\n", (void *)tmp);
+// 	ft_lstclear(&lst, free);
+// 	return (0);
+// }

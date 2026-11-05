@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 13:43:50 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/03 23:07:48 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 12:04:19 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,17 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 // int	main(int argc, char **argv)
 // {
-// 	if (argc != 3 || !(argv[2][0] != '\0' && argv[2][1] == '\0'))
+// 	char	*ptr;
+
+// 	if (argc != 3 || argv[2][1] != '\0')
 // 	{
-// 		printf("Wrong number of arguments.\n");
+// 		printf("Usage: %s <string> <character>\n", argv[0]);
 // 		return (1);
 // 	}
-// 	printf("%s\n", (char *)ft_memchr((const void *)argv[1], (int)argv[2][0],
-// 			ft_strlen(argv[1])));
+// 	ptr = ft_memchr(argv[1], (unsigned char)argv[2][0], ft_strlen(argv[1]) + 1);
+// 	if (ptr)
+// 		printf("Found at offset %td: %s\n", ptr - argv[1], ptr);
+// 	else
+// 		printf("Not found.\n");
 // 	return (0);
 // }
