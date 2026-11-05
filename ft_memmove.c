@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 13:44:43 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/05 10:34:28 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 18:31:39 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 // int	main(int argc, char **argv)
 // {
 // 	size_t	bytes;
-// 	char	ptr[64];
+// 	char	ptr[20];
 
 // 	if (argc != 2)
 // 	{
@@ -43,7 +43,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 // 	}
 // 	bytes = ft_strlen(argv[1]) + 1;
 // 	if (bytes > sizeof(ptr) - 2)
+// 	{
+// 		printf("Error: byte count exceeds buffer size.\n");
 // 		return (1);
+// 	}
 // 	ft_memcpy(ptr, argv[1], bytes);
 // 	printf("Before: %s\n", ptr);
 // 	ft_memmove(ptr + 2, ptr, bytes);

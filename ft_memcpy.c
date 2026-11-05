@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 13:44:24 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/05 10:36:06 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 18:12:27 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // int	main(int argc, char **argv)
 // {
 // 	size_t	bytes;
-// 	char	ptr[64];
+// 	char	ptr[20];
 
 // 	if (argc != 2)
 // 	{
@@ -41,9 +41,14 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // 	}
 // 	bytes = ft_strlen(argv[1]) + 1;
 // 	if (bytes > sizeof(ptr) - 2)
+// 	{
+// 		printf("Error: byte count exceeds buffer size.\n");
 // 		return (1);
+// 	}
 // 	ft_memcpy(ptr, argv[1], bytes);
 // 	printf("Before: %s\n", ptr);
+// 	ft_memcpy(ptr, ptr, bytes);
+// 	printf("After: %s\n", ptr);
 // 	ft_memcpy(ptr + 2, ptr, bytes);
 // 	printf("After (right +2): %s\n", ptr);
 // 	ft_memcpy(ptr, ptr + 2, bytes);

@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 17:43:54 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/04 21:18:37 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 18:54:16 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 // 		return (1);
 // 	result = ft_strnstr(argv[1], argv[2], (size_t)len);
 // 	if (result)
-// 		printf("Found at offset %td: %s\n", result - argv[1], result);
+// 		printf("Found at offset %ld: %s\n", result - argv[1], result);
 // 	else
 // 		printf("Not found\n");
 // 	return (0);

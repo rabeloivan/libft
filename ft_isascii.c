@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:11 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/05 11:14:36 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 17:45:18 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	ft_isascii(int c)
 
 // int	main(int argc, char **argv)
 // {
-// 	int				offset;
-// 	unsigned char	c;
+// 	int	offset;
+// 	int	c;
 
 // 	if (argc < 2)
 // 	{
@@ -31,7 +31,7 @@ int	ft_isascii(int c)
 // 	while (offset < argc)
 // 	{
 // 		c = ft_atoi(argv[offset]);
-// 		printf("%d = %d\n", c, ft_isascii(c));
+// 		printf("%d = %d\n", (unsigned char)c, ft_isascii((unsigned char)c));
 // 		offset++;
 // 	}
 // 	return (0);

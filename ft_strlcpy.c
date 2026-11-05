@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:28 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/04 21:19:01 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 18:41:44 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 // int	main(int argc, char **argv)
 // {
 // 	size_t	len;
-// 	char	dst[10];
+// 	char	dst[20];
 
 // 	if (argc != 2)
 // 	{

@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:19:06 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/05 14:30:47 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 19:13:52 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ unsigned int	ft_lstsize(t_list *lst)
 // 		ft_lstadd_back(&lst, node);
 // 		offset++;
 // 	}
-// 	printf("size = %u\n", ft_lstsize(lst));
+// 	printf("size: %u\n", ft_lstsize(lst));
 // 	ft_lstclear(&lst, free);
 // 	return (0);
 // }
