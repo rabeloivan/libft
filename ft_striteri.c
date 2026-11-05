@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:10:39 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/30 20:21:04 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/04 21:40:31 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,36 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned int	len;
+	unsigned int	offset;
 
 	if (!s || !f)
 		return ;
-	len = 0;
-	while (s[len])
+	offset = 0;
+	while (s[offset])
 	{
-		f(len, &s[len]);
-		len++;
+		f(offset, &s[offset]);
+		offset++;
 	}
 }
+
+// static void	ft_toupper_wrapper(unsigned int offset, char *str)
+// {
+// 	(void)offset;
+// 	*str = (char)ft_toupper((unsigned char)*str);
+// }
+
+// int	main(int argc, char **argv)
+// {
+// 	char	*str;
+
+// 	if (argc != 2)
+// 	{
+// 		printf("Usage: %s <string>\n", argv[0]);
+// 		return (1);
+// 	}
+// 	str = argv[1];
+// 	printf("Before: %s\n", str);
+// 	ft_striteri(str, ft_toupper_wrapper);
+// 	printf("After: %s\n", str);
+// 	return (0);
+// }

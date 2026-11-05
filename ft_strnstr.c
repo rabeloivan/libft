@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 17:43:54 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/03 22:11:39 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/04 21:18:37 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,21 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 // int	main(int argc, char **argv)
 // {
-// 	if (argc != 3)
+// 	int		len;
+// 	char	*result;
+
+// 	if (argc != 4)
 // 	{
-// 		printf("Wrong number of arguments.\n");
+// 		printf("Usage: %s <big_string> <little_string> <len>\n", argv[0]);
 // 		return (1);
 // 	}
-// 	printf("%s\n", ft_strnstr(argv[1], argv[2], ft_strlen(argv[1])));
+// 	len = ft_atoi(argv[3]);
+// 	if (len < 0)
+// 		return (1);
+// 	result = ft_strnstr(argv[1], argv[2], (size_t)len);
+// 	if (result)
+// 		printf("Found at offset %td: %s\n", result - argv[1], result);
+// 	else
+// 		printf("Not found\n");
 // 	return (0);
 // }

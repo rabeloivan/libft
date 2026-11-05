@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:37 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/03 22:12:53 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 11:00:50 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,21 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 // 	size_t	len;
 // 	size_t	offset;
 
-// 	if (argc != 3)
+// 	if (argc != 4)
 // 	{
-// 		printf("Wrong number of arguments.\n");
+// 		printf("Usage: %s <string1> <string2> <len>\n", argv[0]);
 // 		return (1);
 // 	}
-// 	len = ft_strlen(argv[1]);
+// 	len = ft_atoi(argv[3]);
 // 	offset = 0;
-// 	while (offset < len)
-// 	{
-// 		if (argv[1][offset] != argv[2][offset])
-// 			break ;
+// 	while (offset < len && argv[1][offset] == argv[2][offset])
 // 		offset++;
-// 	}
-// 	printf("%d (%c) - %d (%c) = %d\n", argv[1][offset], argv[1][offset],
-// 		argv[2][offset], argv[2][offset], ft_strncmp(argv[1], argv[2], len));
+// 	if (offset < len)
+// 		printf("%d (%c) - %d (%c) = %d\n",
+// 			argv[1][offset], argv[1][offset],
+// 			argv[2][offset], argv[2][offset],
+// 			ft_strncmp(argv[1], argv[2], len));
+// 	else
+// 		printf("0\n");
 // 	return (0);
 // }

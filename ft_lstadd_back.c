@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:19:29 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/30 16:13:06 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 14:22:47 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,40 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last = ft_lstlast(*lst);
 	last->next = new;
 }
+
+// int	main(int argc, char **argv)
+// {
+// 	t_list	*lst;
+// 	t_list	*node;
+// 	t_list	*tmp;
+// 	int		offset;
+
+// 	if (argc < 2)
+// 	{
+// 		printf("Usage: %s <string1> [string2 ...]\n", argv[0]);
+// 		return (1);
+// 	}
+// 	lst = NULL;
+// 	offset = 1;
+// 	while (offset < argc)
+// 	{
+// 		node = ft_lstnew(ft_strdup(argv[offset]));
+// 		if (!node)
+// 		{
+// 			ft_lstclear(&lst, free);
+// 			return (1);
+// 		}
+// 		ft_lstadd_back(&lst, node);
+// 		offset++;
+// 	}
+// 	printf("lst: ");
+// 	tmp = lst;
+// 	while (tmp)
+// 	{
+// 		printf("%s -> ", (char *)tmp->content);
+// 		tmp = tmp->next;
+// 	}
+// 	printf("%p\n", (void *)tmp);
+// 	ft_lstclear(&lst, free);
+// 	return (0);
+// }

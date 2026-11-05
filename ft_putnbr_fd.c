@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 00:34:19 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/31 22:18:04 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 10:02:45 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,15 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(num + '0', fd);
 }
+
+// int	main(int argc, char **argv)
+// {
+// 	if (argc != 2)
+// 	{
+// 		printf("Usage: %s <integer>\n", argv[0]);
+// 		return (1);
+// 	}
+// 	ft_putnbr_fd(ft_atoi(argv[1]), STDOUT_FILENO);
+// 	ft_putchar_fd('\n', STDOUT_FILENO);
+// 	return (0);
+// }

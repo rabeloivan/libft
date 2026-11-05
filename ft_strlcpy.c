@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:28 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/03 20:18:39 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/04 21:19:01 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,18 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (offset);
 }
 
-// int	main(void)
+// int	main(int argc, char **argv)
 // {
-// 	char	dst[10] = "xxx";
+// 	size_t	len;
+// 	char	dst[10];
 
-// 	printf("'dst' before ft_strlcpy:\n%s\n", dst);
-// 	ft_strlcpy(dst, "Hello, World!", sizeof(dst));
-// 	printf("\n'dst' before ft_strlcpy:\n%s\n", dst);
+// 	if (argc != 2)
+// 	{
+// 		printf("Usage: %s <string>\n", argv[0]);
+// 		return (1);
+// 	}
+// 	len = ft_strlcpy(dst, argv[1], sizeof(dst));
+// 	printf("Source: %s\nDestination: %s\n", argv[1], dst);
+// 	printf("Source length: %zu\n", len);
 // 	return (0);
 // }

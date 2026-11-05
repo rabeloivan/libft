@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:43 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/03 23:27:21 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 11:07:56 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,14 @@ int	ft_atoi(const char *nptr)
 	return (result * sign);
 }
 
-int	main(int argc, char **argv)
-{
-	if (argc != 2)
-	{
-		printf("Usage: %s <number>\n", argv[0]);
-		return (1);
-	}
-	printf("Input%d\n", ft_atoi(argv[1]));
-	return (0);
-}
+// int	main(int argc, char **argv)
+// {
+// 	if (argc != 2)
+// 	{
+// 		printf("Usage: %s <string>\n", argv[0]);
+// 		return (1);
+// 	}
+// 	printf("Input: %s\n", argv[1]);
+// 	printf("Result: %d\n", ft_atoi(argv[1]));
+// 	return (0);
+// }

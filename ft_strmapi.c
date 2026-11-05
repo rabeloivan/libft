@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:10:53 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/31 22:34:18 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 12:05:07 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,42 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	len;
 	char	*result;
+	size_t	offset;
 
 	if (!s || !f)
 		return (NULL);
-	len = ft_strlen(s);
-	result = (char *)ft_calloc(len + 1, sizeof(char));
+	result = ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (!result)
 		return (NULL);
-	len = 0;
-	while (s[len])
+	offset = 0;
+	while (s[offset])
 	{
-		result[len] = f((unsigned int)len, s[len]);
-		len++;
+		result[offset] = f((unsigned int)offset, s[offset]);
+		offset++;
 	}
 	return (result);
 }
+
+// static char	ft_toupper_wrapper(unsigned int offset, char character)
+// {
+// 	(void)offset;
+// 	return ((char)ft_toupper((unsigned char)character));
+// }
+
+// int	main(int argc, char **argv)
+// {
+// 	char	*result;
+
+// 	if (argc != 2)
+// 	{
+// 		printf("Usage: %s <string>\n", argv[0]);
+// 		return (1);
+// 	}
+// 	result = ft_strmapi(argv[1], ft_toupper_wrapper);
+// 	if (!result)
+// 		return (1);
+// 	printf("Result: %s\n", result);
+// 	free(result);
+// 	return (0);
+// }

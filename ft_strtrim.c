@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irabelo <irabelo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:11:30 by irabelo           #+#    #+#             */
-/*   Updated: 2026/10/31 22:57:27 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 12:05:11 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,26 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (start >= end)
 		return (ft_strdup(""));
 	len = end - start;
-	result = (char *)ft_calloc(len + 1, sizeof(char));
+	result = ft_calloc(len + 1, sizeof(char));
 	if (!result)
 		return (NULL);
 	ft_strlcpy(result, s1 + start, len + 1);
 	return (result);
 }
+
+// int	main(int argc, char **argv)
+// {
+// 	char	*result;
+
+// 	if (argc != 3)
+// 	{
+// 		printf("Usage: %s <string> <charset>\n", argv[0]);
+// 		return (1);
+// 	}
+// 	result = ft_strtrim(argv[1], argv[2]);
+// 	if (!result)
+// 		return (1);
+// 	printf("Result: %s\n", result);
+// 	free(result);
+// 	return (0);
+// }

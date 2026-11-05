@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 17:44:49 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/03 23:10:46 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 12:44:25 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,29 @@
 char	*ft_strdup(const char *s)
 {
 	size_t	len;
-	char	*str;
+	char	*dup;
 
 	len = ft_strlen(s);
-	str = (char *)ft_calloc(len + 1, sizeof(char));
-	if (!str)
+	dup = ft_calloc(len + 1, sizeof(char));
+	if (!dup)
 		return (NULL);
-	ft_strlcpy(str, s, len + 1);
-	return (str);
+	ft_strlcpy(dup, s, len + 1);
+	return (dup);
 }
 
-// int	main(void)
+// int	main(int argc, char **argv)
 // {
-// 	char	*str;
+// 	char	*dup;
 
-// 	str = NULL;
-// 	printf("'str' before ft_strdup:\n%s\n", str);
-// 	str = ft_strdup("Hello, World!");
-// 	printf("\n'str' after ft_strdup:\n%s\n", str);
+// 	if (argc != 2)
+// 	{
+// 		printf("Usage: %s <string>\n", argv[0]);
+// 		return (1);
+// 	}
+// 	dup = ft_strdup(argv[1]);
+// 	if (!dup)
+// 		return (1);
+// 	printf("Original: %s\nCopy: %s\n", argv[1], dup);
+// 	free(dup);
 // 	return (0);
 // }

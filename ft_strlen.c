@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:16 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/03 22:14:12 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/04 21:15:45 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ size_t	ft_strlen(const char *s)
 
 // 	if (argc < 2)
 // 	{
-// 		printf("Wrong number of arguments.\n");
+// 		printf("Usage: %s <string1> [string2 ...]\n", argv[0]);
 // 		return (1);
 // 	}
 // 	offset = 1;
 // 	while (offset < argc)
 // 	{
-// 		printf("%s — %zu\n", argv[offset], ft_strlen(argv[offset]));
+// 		printf("%s: %zu\n", argv[offset], ft_strlen(argv[offset]));
 // 		offset++;
 // 	}
 // 	return (0);

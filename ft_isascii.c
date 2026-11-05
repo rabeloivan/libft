@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:11 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/03 22:14:33 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 11:14:36 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,19 @@ int	ft_isascii(int c)
 
 // int	main(int argc, char **argv)
 // {
-// 	int	offset;
+// 	int				offset;
+// 	unsigned char	c;
 
 // 	if (argc < 2)
 // 	{
-// 		printf("Wrong number of arguments.\n");
+// 		printf("Usage: %s <decimal1> [decimal2 ...]\n", argv[0]);
 // 		return (1);
 // 	}
 // 	offset = 1;
 // 	while (offset < argc)
 // 	{
-// 		if (argv[offset][0] != '\0' && !argv[offset][1])
-// 			printf("%c — %d\n", argv[offset][0], ft_isascii(argv[offset][0]));
+// 		c = ft_atoi(argv[offset]);
+// 		printf("%d = %d\n", c, ft_isascii(c));
 // 		offset++;
 // 	}
 // 	return (0);

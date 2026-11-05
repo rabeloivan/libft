@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:19 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/03 20:16:46 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 10:18:37 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,25 +26,22 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-// int	main(void)
+// int	main(int argc, char **argv)
 // {
-// 	char	arr[10];
-// 	size_t	len;
-// 	size_t	offset;
+// 	size_t	bytes;
+// 	char	ptr[10];
 
-// 	printf("'arr' before ft_memset:\n");
-// 	len = sizeof(arr);
-// 	offset = 0;
-// 	while (offset < len)
+// 	if (argc != 3 || argv[2][1] != '\0')
 // 	{
-// 		arr[offset] = '0';
-// 		printf("%c ", arr[offset++]);
+// 		printf("Usage: %s <string> <character>\n", argv[0]);
+// 		return (1);
 // 	}
-// 	ft_memset((void *)arr, '9', len);
-// 	printf("\n\n'arr' after ft_memset:\n");
-// 	offset = 0;
-// 	while (offset < len)
-// 		printf("%c ", arr[offset++]);
-// 	printf("\n");
+// 	bytes = ft_strlen(argv[1]);
+// 	if (bytes >= sizeof(ptr))
+// 		return (1);
+// 	ft_memcpy(ptr, argv[1], bytes + 1);
+// 	printf("Before: %s\n", ptr);
+// 	ft_memset(ptr, (unsigned char)argv[2][0], bytes);
+// 	printf("After: %s\n", ptr);
 // 	return (0);
 // }
