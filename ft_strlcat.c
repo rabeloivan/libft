@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 17:43:14 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/04 21:21:57 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 18:44:35 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 // int	main(int argc, char **argv)
 // {
-// 	char	dst[10];
+// 	char	dst[20];
 // 	size_t	len;
 
 // 	if (argc != 3)
@@ -44,8 +44,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 // 		printf("Usage: %s <string1> <string2>\n", argv[0]);
 // 		return (1);
 // 	}
-// 	if (ft_strlen(argv[1]) >= sizeof(dst))
-// 		return (1);
 // 	ft_strlcpy(dst, argv[1], sizeof(dst));
 // 	printf("Before: %s\n", dst);
 // 	len = ft_strlcat(dst, argv[2], sizeof(dst));

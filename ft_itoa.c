@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:11:07 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/05 12:03:23 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 19:03:29 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,8 @@ char	*ft_itoa(int n)
 
 // int	main(int argc, char **argv)
 // {
-// 	int	n;
+// 	int		n;
+// 	char	*result;
 
 // 	if (argc != 2)
 // 	{
@@ -69,7 +70,9 @@ char	*ft_itoa(int n)
 // 		return (1);
 // 	}
 // 	n = ft_atoi(argv[1]);
+// 	result = ft_itoa(n);
 // 	printf("Input: %s\n", argv[1]);
-// 	printf("Result: %s\n", ft_itoa(n));
+// 	printf("Result: %s\n", result);
+// 	free(result);
 // 	return (0);
 // }

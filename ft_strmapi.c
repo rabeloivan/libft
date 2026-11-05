@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:10:53 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/05 12:05:07 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 19:08:37 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*result;
+	size_t	len;
 	size_t	offset;
 
 	if (!s || !f)
 		return (NULL);
-	result = ft_calloc(ft_strlen(s) + 1, sizeof(char));
+	len = ft_strlen(s);
+	result = ft_calloc(len + 1, sizeof(char));
 	if (!result)
 		return (NULL);
 	offset = 0;

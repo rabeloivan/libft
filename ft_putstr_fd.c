@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 00:33:55 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/05 09:58:03 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 19:10:08 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ void	ft_putstr_fd(char *s, int fd)
 	if (!s)
 		return ;
 	while (*s)
-		ft_putchar_fd(*s++, fd);
+	{
+		ft_putchar_fd(*s, fd);
+		s++;
+	}
 }
 
 // int	main(int argc, char **argv)

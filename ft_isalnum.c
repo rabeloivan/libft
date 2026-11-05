@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:09 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/05 11:16:23 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 17:43:19 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_isalnum(int c)
 
 // 	if (argc != 2)
 // 	{
-// 		printf("Usage: %s <text>\n", argv[0]);
+// 		printf("Usage: %s <string>\n", argv[0]);
 // 		return (1);
 // 	}
 // 	str = argv[1];

@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 00:33:44 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/05 10:11:22 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/05 19:09:22 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ void	ft_putchar_fd(char c, int fd)
 // 	}
 // 	offset = 0;
 // 	while (argv[1][offset])
-// 		ft_putchar_fd(argv[1][offset++], STDOUT_FILENO);
+// 	{
+// 		ft_putchar_fd(argv[1][offset], STDOUT_FILENO);
+// 		offset++;
+// 	}
 // 	ft_putchar_fd('\n', STDOUT_FILENO);
 // 	return (0);
 // }
