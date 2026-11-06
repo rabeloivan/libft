@@ -6,7 +6,7 @@
 /*   By: irabelo <irabelo@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 10:52:21 by irabelo           #+#    #+#             */
-/*   Updated: 2026/11/05 18:08:00 by irabelo          ###   ########.fr       */
+/*   Updated: 2026/11/06 17:02:38 by irabelo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	ft_bzero(void *s, size_t n)
 
 // int	main(void)
 // {
-// 	char	ptr[5] = {'a', 'b', 'c', 'd', 'e'};
 // 	size_t	bytes;
+// 	char	ptr[5] = {'a', 'b', 'c', 'd', 'e'};
 // 	size_t	offset;
 
 // 	bytes = sizeof(ptr);
